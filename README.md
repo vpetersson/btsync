@@ -14,7 +14,9 @@ This Docker container relies on the environment variable `SYNCKEY`. For your own
 
 Assuming you actually want to permanently store the data, the container also requires that you pass on a local storage path (outside of the container) where you store the data (`/local/storagepath:` below). This may be either a regular path or an encrypted volume.
 
-    docker run -d -e "SYNCKEY=YourSyncKey" -v /local/storagepath:/sync/ vpetersson/btsync
+The name variable is optional, but recommended such that you can identify what share the instance is running.
+
+    docker run -d -e "SYNCKEY=YourSyncKey" --name "NameOfYourShare" -v /local/storagepath:/sync/ vpetersson/btsync
 
 Each container is designed to only run one share, so you will need to spin up one container per share.
 
