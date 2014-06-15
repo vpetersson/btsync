@@ -1,9 +1,5 @@
 #!/bin/bash
 
-
-# Make sure the sync folder exist
-mkdir -p /sync
-
 # Only proceed if we have a sync key
 if [ -z "$SYNCKEY" ]; then
     echo "Using Sync Key $SYNCKEY"
