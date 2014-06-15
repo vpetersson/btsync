@@ -1,6 +1,6 @@
 # BitTorrent Sync running in Docker
 
-tl;dr Run BitTorrent Sync isolated within a Docker container.
+tl;dr Run [BitTorrent Sync](http://www.bittorrent.com/sync) isolated within a Docker container.
 
 # Installation
 
@@ -17,6 +17,7 @@ Assuming you actually want to permanently store the data, the container also req
 The name variable is optional, but recommended such that you can identify what share the instance is running.
 
     docker run -d \
+        -p 55555 \
         -e "SYNCKEY=YourSyncKey" \
         -e "MYHOSTNAME=$HOSTNAME" \
         --name "NameOfYourShare" \
