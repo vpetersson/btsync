@@ -14,6 +14,6 @@ if [ -z "$MYHOSTNAME" ]; then
 fi
 
 # Replace placeholders
-sed -i "s/MYHOSTNAME/$MYHOSTNAME/g;s/DOCKERID/$(hostname)/g;s/MYSECRET/$SYNCKEY/g" /etc/btsync.conf
+sed -i "s/MYHOSTNAME/$MYHOSTNAME/g;s/DOCKERID/$(hostname)/g;s/MYSECRET/$SYNCKEY/g" /sync/btsync.conf
 
 /usr/bin/btsync --config /sync/btsync.conf --nodaemon
