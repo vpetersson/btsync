@@ -7,10 +7,17 @@ if [ -z "$SYNCKEY" ]; then
     exit 1
 fi
 
-# Only proceed if we have a sync key
+# Only proceed if a hostname was passed
 if [ -z "$MYHOSTNAME" ]; then
     echo "No hostname defined. Exiting."
     exit 1
+fi
+
+# Do not accept read-write keys
+# These keys starts with A or D
+if [[ "$SYNCKEY" =~ ^(A|D).* ]]; then
+  echo -e"\n\nRead-write key found.\nPlease only use read-only keys.\n\nAborting.\n\n"
+  exit 1
 fi
 
 # Replace placeholders
