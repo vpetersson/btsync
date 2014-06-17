@@ -16,4 +16,4 @@ fi
 # Replace placeholders
 sed -i "s/MYHOSTNAME/$MYHOSTNAME/g;s/DOCKERID/$(hostname)/g;s/MYSECRET/$SYNCKEY/g" /etc/btsync.conf
 
-/usr/bin/btsync --config /etc/btsync.conf --nodaemon
+/usr/bin/btsync --config /sync/btsync.conf --nodaemon

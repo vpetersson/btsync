@@ -21,7 +21,7 @@ The name variable is optional, but recommended such that you can identify what s
         -e "SYNCKEY=YourSyncKey" \
         -e "MYHOSTNAME=$HOSTNAME" \
         --name "NameOfYourShare" \
-        -v /local/storagepath:/sync \
+        -v /local/storagepath:/sync/storage \
         vpetersson/btsync
 
 Each container is designed to only run one share, so you will need to spin up one container per share.
