@@ -20,6 +20,9 @@ if [[ "$SYNCKEY" =~ ^(A|D).* ]]; then
   exit 1
 fi
 
+# Make sure the folder exists
+mkdir -p /sync/storage
+
 # Replace placeholders
 sed -i "s/MYHOSTNAME/$MYHOSTNAME/g;s/DOCKERID/$(hostname)/g;s/MYSECRET/$SYNCKEY/g" /sync/btsync.conf
 
