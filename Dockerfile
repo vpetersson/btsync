@@ -12,8 +12,8 @@ RUN rm /tmp/btsync.tar.gz
 RUN rm -f /usr/bin/LICENSE.TXT
 
 # Add config file
-ADD btsync.conf /sync/btsync.conf
-ADD start.sh /start.sh
+ADD include/btsync.conf /sync/btsync.conf
+ADD include/start.sh /start.sh
 
 # Run the boot script
 CMD /start.sh

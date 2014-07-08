@@ -1,5 +1,7 @@
 #!/bin/bash
 
+echo "Starting btsync Docker container..."
+
 # Only proceed if we have a sync key
 if [ -z "$SYNCKEY" ]; then
     echo "Using Sync Key $SYNCKEY"
