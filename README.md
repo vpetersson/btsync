@@ -26,6 +26,12 @@ The name variable is optional, but recommended such that you can identify what s
 
 Each container is designed to only run one share, so you will need to spin up one container per share.
 
+Alternatively, you can use the script `create_instance.sh` to create your instances.
+
+    wget https://raw.githubusercontent.com/vpetersson/btsync/master/create_instance.sh
+    chmod +x create_instance.sh
+    ./create_instance.sh sync-key share-name local-path
+
 # Credits
 
  * [billt2006](https://github.com/billt2006/docker-btsync) for the initial inspiration.
