@@ -11,6 +11,9 @@ RUN tar xvfz /tmp/btsync.tar.gz -C /usr/bin/
 RUN rm /tmp/btsync.tar.gz
 RUN rm -f /usr/bin/LICENSE.TXT
 
+# Print out the version (there is no version arg, so we grep for it)
+RUN /usr/bin/btsync --foobar | grep "BitTorrent Sync"
+
 # Add config file
 ADD includes/btsync.conf /sync/btsync.conf
 ADD includes/start.sh /start.sh
