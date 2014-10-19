@@ -25,6 +25,24 @@ fi
 # Make sure the folder exists
 mkdir -p /sync/storage
 
+# Manually manage the exclude list
+mkdir -p /sync/storage/.sync
+rm -f /sync/storage/.sync
+
+# Simplify appending files
+function ignoreList {
+  echo "$1" >> /sync/storage/.sync/IgnoreList
+}
+
+ignoreList "_Store"
+ignoreList ".Spotlight-V100"
+ignoreList ".Trashes"
+ignoreList "~*"
+ignoreList "ehthumbs.db"
+ignoreList "desktop.ini"
+ignoreList "Thumbs.db"
+ignoreList "com.apple.FinderInfo"
+
 # Replace placeholders
 sed -i "s/MYHOSTNAME/$MYHOSTNAME/g;s/DOCKERID/$(hostname)/g;s/MYSECRET/$SYNCKEY/g" /sync/btsync.conf
 
