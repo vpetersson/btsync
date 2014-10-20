@@ -27,4 +27,5 @@ docker run -d \
     -e "MYHOSTNAME=$HOSTNAME" \
     --name "$SHARENAME" \
     -v $LOCALPATH:/sync/storage \
+    --restart=always \
     vpetersson/btsync
