@@ -27,7 +27,7 @@ mkdir -p /sync/storage
 
 # Manually manage the exclude list
 mkdir -p /sync/storage/.sync
-rm -f /sync/storage/.sync
+rm -rf /sync/storage/.sync
 
 # Simplify appending files
 function ignoreList {
