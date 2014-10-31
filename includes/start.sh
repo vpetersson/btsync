@@ -42,6 +42,8 @@ ignoreList "ehthumbs.db"
 ignoreList "desktop.ini"
 ignoreList "Thumbs.db"
 ignoreList "com.apple.FinderInfo"
+ignoreList "com.apple.ResourceFork"
+ignoreList "*.swp"
 
 # Replace placeholders
 sed -i "s/MYHOSTNAME/$MYHOSTNAME/g;s/DOCKERID/$(hostname)/g;s/MYSECRET/$SYNCKEY/g" /sync/btsync.conf
